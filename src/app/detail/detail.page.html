@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detail Produk</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <img src="{{produk.thumbnail}}" />
+
+  <ion-list>
+
+  <ion-item>
+    <ion-label>Nama Produk : {{ produk.title }}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Deskripsi : {{ produk.description }}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Harga : {{ produk.price }}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Diskon : {{ produk.discountPercentage }}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Rating : {{ produk.rating }}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Stok : {{ produk.stock }}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Merek : {{ produk.brand }}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Kategori : {{ produk.category }}</ion-label>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-label>Galeri : {{ produk.images }}</ion-label>
+  </ion-item>
+
+
+  </ion-list>
+
+  <ion-button (click)="goBack()" expand="block" shape="round">
+    Kembali
+  </ion-button>
+</ion-content>

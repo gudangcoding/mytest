@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon (click)="goBack()" slot="start" name="arrow-back" class="back"></ion-icon>
+    <ion-title>Hasil Pencarian</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let item of produk">
+      <ion-thumbnail slot="start">
+        <img alt="{{item.title}}" src="{{item.thumbnail}}" />
+      </ion-thumbnail>
+      <ion-label>
+        {{item.title}}
+      </ion-label>
+      <ion-button (click)="detail(item.id)" slot="end">
+        View
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
